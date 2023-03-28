@@ -30,7 +30,7 @@
             int a = 0;
             double sm = 1;
             double hno;
-
+            int eded;
 
             Console.WriteLine("secdiyiniz ededler:");
 
@@ -40,7 +40,9 @@
             }
 
             Console.WriteLine("Muqayise olunacaq ededi daxil et:");
-            int eded = int.Parse(Console.ReadLine());
+             eded = int.Parse(Console.ReadLine());
+            eded = Math.Abs(eded);
+
 
 
 
@@ -60,7 +62,7 @@
                     ededler[x] = ints[i];
 
 
-                    Console.WriteLine($"Yeni Massiv ---   " + ededler[x]);
+                    
 
 
                     for (a = 0; a < ededler.Length; a++)
@@ -77,11 +79,15 @@
                     sm *= ededler[x];
                     len = ededler.Length;
 
+                    Console.WriteLine(ededler.Max);
+
+
+
 
 
                 }
 
-                // 2 Ci aray
+                
 
 
                 if (ints[i] > eded)
@@ -90,12 +96,15 @@
                     int F = counter - 1;
                     Kededler = new int[counter];
                     Kededler[F] = ints[i];
-                    Console.WriteLine($"Yeni Massiv 2 ---   " + Kededler[F]);
+
+
+
+                    //4.a massivinin(a[0], a[1]....a[n]) | a[i] | < c sertini odeyen elementlerini coxdan aza dogru siralamaq/ done
 
                     Array.Sort(Kededler);
                     Array.Reverse(Kededler);
 
-                    Console.WriteLine($"Yeni Massiv 2 Z-A ---   " + Kededler[F]);
+    
 
 
                 }
@@ -121,9 +130,15 @@
 
 
 
+
+
+            // Hendesi ORTA
+
             Console.WriteLine("Hendesi orta --");
             Console.WriteLine(hno);
 
+
+            // EDEDI ORTA
 
 
             Console.WriteLine("ededi orta --");
